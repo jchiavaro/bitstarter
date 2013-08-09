@@ -1,9 +1,7 @@
-
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mercury</title>
+    <title>My First Bitstarter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -88,7 +86,7 @@
       .asset {
         padding: 2.5% 0%;
       }
-      .footer {
+       .footer {
         color: #cccccc;
         text-align: center;
       }
@@ -96,13 +94,62 @@
         font-size: 11px;
       }
       .footer a {
-        color: #ccccff;
+        color: blue;
       }
+      .navbar-inverse .navbar-inner {
+        background-color: #3B0909;
+        background-image: none;
+      }
+      .navbar .brand{
+        color: white;
+        font-weight: bold;
+      }
+      .nav-link{
+        color: white;
+      }
+      .navbar-inverse .brand, .navbar-inverse .nav>li>a{
+        color: white;
+      }
+      h2{
+        color: #3B0909;
+      }
+      /* Wrapping element */
+      /* Set some basic padding to keep content from hitting the edges */
+      .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .btn-view-details{
+        color: white;
+        background-color: #3B0909;
+        background-image: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+
+      /* Responsive: Portrait tablets and up */
+      @media screen and (min-width: 768px) {
+      /* Let the jumbotron breathe */
+      .main-section {
+        margin-top: 20px;
+        background-color: #3B0909;
+        color: white;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+      }
+      /* Remove padding from wrapping element since we kick in the grid classes here */
+      .body-content {
+        padding: 0;
+      }
+      
       /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
       div.addthis_toolbox {
         width:180px;
         margin: 0 auto;
       }
+      
     </style>
 
     <!-- Google Analytics Classic -->
@@ -120,7 +167,9 @@
 
     </script>
     <!-- End Google Analytics Classic -->
-
+    
+    <!-- Coinbase button -->
+    <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
   </head>
   <body>
 
@@ -137,8 +186,8 @@
           </button>
           <a class="brand" href="#">Mercury</a>
           <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Get Started</a></li>
+            <ul class="nav pull-right">
+              <li class="aaa"><a href="#">Get Started</a></li>
               <li><a href="#about">How it works</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -154,17 +203,21 @@
       <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
       <!-- www.google.com/fonts/specimen/Ubuntu -->
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>Mercury</h1>
-        </div>
-      </div> 
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">Get New Customers Faster than Ever</p>
-        </div>
+
+      <!-- Main section begin -->
+      <div class="main-section">
+        <div class="row-fluid heading">
+          <div class="span12">
+            <h1>Mercury</h1>
+          </div>
+	</div> 
+	<div class="row-fluid subheading">
+          <div class="span12">
+            <!-- Special typography from Bootstrap for lead paragraph. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+            <p class="lead">Get New Customers Faster than Ever</p>
+          </div>
+	</div>
       </div>
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
@@ -196,25 +249,23 @@
               </div>
 
             </div>
-
-
           </div>
           <div class="row-fluid">
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
+            <div class="span10 offset1">
+              <!-- Bootstrap progress bar -->
+              <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+              <div class="thermometer progress active">
+		<div class="bar bar-success" style="width: 60%;"></div>
+		<div class="bar bar-warning" style="width: 40%;"></div>
+              </div>
             </div>
           </div>
-          </div>
           <div class="row-fluid">
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
+            <div class="span6 offset3 order">
+	      <a class="coinbase-button" data-code="efd07a1f050e4938054914debfb5ca48" data-button-style="custom_large" href="https://coinbase.com/checkouts/efd07a1f050e4938054914debfb5ca48">
+		Pay With Bitcoin
+	      </a>
+            </div>
           </div>
           <div class="row-fluid">
             <div class="span8 offset2 social">
@@ -230,53 +281,27 @@
 	      <!-- AddThis Button END -->
 	    </div>
           </div>
-        </div>
-        </div>
-      </div>
-
-      <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-      <!-- http://placehold.it -->
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
-        </div>
-        <div class="span5 copy">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
+          </div>
         </div>
       </div>
 
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
-          </p>
-        </div>
-        <div class="span5 asset">
-          <img class="img-polaroid"  alt="Placeholder" src="http://placehold.it/480x300">
+      <div class="body-content">
+        <div class="row-fluid">
+          <div class="span4">
+            <h2>Find Customers</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-view-details" href="#">View details &raquo;</a></p>
+          </div>
+          <div class="span4">
+            <h2>Social Networks</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-view-details" href="#">View details &raquo;</a></p>
+          </div>
+          <div class="span4">
+            <h2>Email Customers</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-view-details" href="#">View details &raquo;</a></p>
+          </div>
         </div>
       </div>
 
